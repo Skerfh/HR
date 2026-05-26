@@ -1,0 +1,7 @@
+for $e in /hr/employees/employee
+let $d := /hr/departments/department[@department_id = $e/department_id]
+return
+<employee_info>
+  <name>{data($e/first_name)} {data($e/last_name)}</name>
+  <department>{data($d/department_name)}</department>
+</employee_info>

@@ -1,0 +1,9 @@
+<employee employee_id="100">
+         <first_name>Steven</first_name>
+         <last_name>King</last_name>
+         <email>SKING</email>
+         <hire_date>2003-06-17</hire_date>
+         <salary>24000</salary>
+         <job_id>AD_PRES</job_id>
+         <department_id>90</department_id>
+      </employee>
