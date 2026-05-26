@@ -1,7 +1,4 @@
-for $e in /hr/employees/employee
-let $j := /hr/jobs/job[@job_id = $e/job_id]
-return
 <employee_job>
-  <name>{data($e/first_name)}</name>
-  <job>{data($j/job_title)}</job>
+  <name>{data(/hr/employees/employee/first_name)}</name>
+  <job>{data(/hr/jobs/job/job_title)}</job>
 </employee_job>
