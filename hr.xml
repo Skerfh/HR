@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hr>
+   <regions>
+      <region region_id="1">
+         <region_name>Americas</region_name>
+      </region>
+   </regions>
+   <countries>
+      <country country_id="US">
+         <country_name>United States</country_name>
+         <region_id>1</region_id>
+      </country>
+   </countries>
+   <locations>
+      <location location_id="1000">
+         <street_address>2004 Charade Rd</street_address>
+         <city>Seattle</city>
+         <country_id>US</country_id>
+      </location>
+   </locations>
+   <departments>
+      <department department_id="90">
+         <department_name>Executive</department_name>
+         <location_id>1000</location_id>
+      </department>
+   </departments>
+   <jobs>
+      <job job_id="AD_PRES">
+         <job_title>President</job_title>
+         <min_salary>20000</min_salary>
+         <max_salary>40000</max_salary>
+      </job>
+   </jobs>
+   <employees>
+      <employee employee_id="100">
+         <first_name>Steven</first_name>
+         <last_name>King</last_name>
+         <email>SKING</email>
+         <hire_date>2003-06-17</hire_date>
+         <salary>24000</salary>
+         <job_id>AD_PRES</job_id>
+         <department_id>90</department_id>
+      </employee>
+   </employees>
+   <job_history>
+      <job_history_record>
+         <employee_id>100</employee_id>
+         <job_id>AD_PRES</job_id>
+         <department_id>90</department_id>
+      </job_history_record>
+   </job_history>
+</hr>

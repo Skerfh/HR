@@ -1,0 +1,119 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="hr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="regions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="region">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="region_name"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="region_id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="countries">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="country">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="country_name"/>
+                    <xs:element type="xs:byte" name="region_id"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="country_id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="locations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="location">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="street_address"/>
+                    <xs:element type="xs:string" name="city"/>
+                    <xs:element type="xs:string" name="country_id"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:short" name="location_id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="departments">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="department">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="department_name"/>
+                    <xs:element type="xs:short" name="location_id"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="department_id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="jobs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="job">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="job_title"/>
+                    <xs:element type="xs:short" name="min_salary"/>
+                    <xs:element type="xs:int" name="max_salary"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="job_id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="employees">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="first_name"/>
+                    <xs:element type="xs:string" name="last_name"/>
+                    <xs:element type="xs:string" name="email"/>
+                    <xs:element type="xs:date" name="hire_date"/>
+                    <xs:element type="xs:short" name="salary"/>
+                    <xs:element type="xs:string" name="job_id"/>
+                    <xs:element type="xs:byte" name="department_id"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="employee_id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="job_history">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="job_history_record">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="employee_id"/>
+                    <xs:element type="xs:string" name="job_id"/>
+                    <xs:element type="xs:byte" name="department_id"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
